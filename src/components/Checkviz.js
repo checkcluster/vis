@@ -23,10 +23,6 @@ const Checkviz = (props) => {
         };
     });
     
-
-    
-
-
     const width = props.width;
     const height = props.height;
     const margin = { hor: 0, ver: 0 };

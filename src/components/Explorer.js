@@ -34,7 +34,8 @@ const Explorer = (props) => {
 
     const width = props.width;
     const height = props.height;
-    const margin = { hor: width / 20, ver: height / 20 };
+    // const margin = { hor: width / 20, ver: height / 20 };
+    const margin = { hor: 0, ver: 0 };
 
     const [minX, maxX] = d3.extent(pointsData, d => d.coor[0]);
     const [minY, maxY] = d3.extent(pointsData, d => d.coor[1]);
@@ -349,6 +350,9 @@ console.log("CC useEffect...");
                 id={"ccSvg"}
                 style={{cursor:"crosshair"}}
             ></svg>
+            <div>
+                Cluster Selection: make contour by creating the vertices with mouse clicks.
+            </div>
         </div>
     );
 };
