@@ -6,7 +6,8 @@ import inside from 'point-in-polygon'
 const Explorer = (props) => {
 
 
-    let jsonFileName = props.dataset + "_" + props.method;
+    // let jsonFileName = props.dataset + "_" + props.method;
+    let jsonFileName = props.dataset;
     let pointsData = require("../json/" + jsonFileName + "_points.json");
     let edgesData = require("../json/" + jsonFileName + "_edges.json");
     let missingPointsData = require("../json/" + jsonFileName + "_missing_points.json")

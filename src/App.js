@@ -24,17 +24,20 @@ const App = (props) => {
 
   // defaults
   let datasetList = [
-    "mnist_sampled_2",
-    "fmnist_sampled_2",
-    "kmnist_sampled_2"
+    "mnist_pca",
+    "fmnist_pca",
+    "kmnist_pca",
+    "mnist_tsne",
+    "mnist_umap",
+    "mnist_isomap",
   ];
 
-  let methodList = [
-    "tsne",
-    "umap",
-    "pca",
-    "isomap",
-  ];
+  // let methodList = [
+  //   "tsne",
+  //   "umap",
+  //   "pca",
+  //   "isomap",
+  // ];
 
   let displayModeList = [
     ["CheckCluster", "cc"],
@@ -53,7 +56,7 @@ const App = (props) => {
   const height = 800;
 
 
-  const [method, setMethod] = useState(methodList[0]);
+  // const [method, setMethod] = useState(methodList[0]);
   const [dataset, setDataset] = useState(datasetList[0]);
   const [displayMode, setDisplayMode] = useState(displayModeList[0][1]);
 
@@ -101,7 +104,7 @@ const App = (props) => {
             </FormControl>
           </div>
 
-          <div>
+          {/* <div>
             <FormControl variant="filled" className={classes.formControl}>
               <InputLabel htmlFor="filled-method-native-simple">Method</InputLabel>
               <Select
@@ -120,24 +123,8 @@ const App = (props) => {
                   </option>
                 ))}
               </Select>
-
-              {/* method:
-            <Select
-              id={"methodSelection"}
-              value={method}
-              onChange={(event) => setMethod(event.target.value)}
-              style={{ width: "90px", fontSize: "12px" }}
-              native
-            >
-              {methodList.map((d, i) => (
-                <option key={i} value={d} >
-                  {d}
-                </option>
-              ))}
-            </Select> */}
-
             </FormControl>
-          </div>
+          </div> */}
 
           <div>
             <FormControl variant="filled" className={classes.formControl}>
@@ -189,7 +176,7 @@ const App = (props) => {
           >
             {["cc", "bh"].indexOf(displayMode) > -1 &&
               <Explorer
-                method={method}
+                // method={method}
                 dataset={dataset}
                 isLabel={isLabel}
                 showMissing={showMissing}
@@ -205,7 +192,7 @@ const App = (props) => {
           <div id="cv">
             {["cv", "bh"].indexOf(displayMode) > -1 &&
               <Checkviz
-                method={method}
+                // method={method}
                 dataset={dataset}
                 isLabel={isLabel}
                 radius={radius}

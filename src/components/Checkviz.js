@@ -7,7 +7,8 @@ import {Delaunay} from "d3-delaunay";
 const Checkviz = (props) => {
 
 
-    let jsonFileName = props.dataset + "_" + props.method;
+    // let jsonFileName = props.dataset + "_" + props.method;
+    let jsonFileName = props.dataset;
     let pointsData = require("../json/" + jsonFileName + "_points.json");
     let pointsArray;
 
