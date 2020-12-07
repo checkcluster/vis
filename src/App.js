@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Checkviz from './components/Checkviz';
 import Explorer from './components/Explorer';
@@ -59,6 +59,10 @@ const App = (props) => {
   // const [method, setMethod] = useState(methodList[0]);
   const [dataset, setDataset] = useState(datasetList[0]);
   const [displayMode, setDisplayMode] = useState(displayModeList[0][1]);
+
+  useEffect(() => {
+    document.title = "CheckCluster";
+  });
 
   return (
     <div id="App-wrapper">
